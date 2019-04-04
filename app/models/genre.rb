@@ -11,8 +11,8 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.each do |a|
-      puts "#{a.name}"
+    self.artists.map do |a|
+      {a.name}
     end
   end
 end
